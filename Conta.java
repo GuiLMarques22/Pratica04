@@ -1,14 +1,12 @@
-public interface Conta {
+public abstract class Conta {
+    private double saldo;
 
-   default void depositar(double valor) {
-
+    public double getSaldo() {
+        return saldo;
     }
 
- public default void sacar(double valor) {
-
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
-
-    double getSaldo();
-
-
+    public abstract void imprimeExtrato();
 }
